@@ -3,11 +3,14 @@ from  streamlit_player import st_player
 
 import pandas as pd
 
+df = pd.read_excel("processed_links.xlsx")
+df.drop_duplicates(inplace = True)
+
 if __name__ == "__main__":
     import os
 
-    df = pd.read_excel("processed_links.xlsx")
-    df.drop_duplicates(inplace = True)
+    # df = pd.read_excel("processed_links.xlsx")
+    # df.drop_duplicates(inplace = True)
     # print(df.shape[0])
     st.set_page_config(layout="wide", page_title = "Videos worth watching!")
 
