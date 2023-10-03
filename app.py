@@ -19,7 +19,7 @@ if __name__ == "__main__":
     cats = df_in["Category"].unique().tolist()
 
     with top_col[0]:
-        tags = st.multiselect('Which all categories you want to see?', cats, [])
+        tags = st.multiselect('Which all categories you want to see?', cats, ["Tutorial"])
 
     if tags == []:
         df = df_in.copy()
